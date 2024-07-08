@@ -1,3 +1,5 @@
+study link: https://github.com/john-smilga/nextjs-course-home-away/tree/main/02-home-away-project
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
