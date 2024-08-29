@@ -12,6 +12,17 @@ import {
 } from "./schemas";
 import { uploadImage } from "./supabase";
 
+export const fetchPropertyDetails = (id: string) => {
+  return db.property.findUnique({
+    where: {
+      id,
+    },
+    include: {
+      profile: true,
+    },
+  });
+};
+
 export const fetchFavorites = async () => {
   const user = await getAuthUser();
   const favorites = await db.favorite.findMany({
