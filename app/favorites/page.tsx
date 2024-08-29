@@ -1,4 +1,14 @@
-function FavoritePage() {
-  return <h1 className="text-3xl">CheckoutPage</h1>;
+import EmptyList from "@/components/home/EmptyList";
+import PropertiesList from "@/components/home/PropertiesList";
+import { fetchFavorites } from "@/utils/actions";
+
+async function FavoritesPage() {
+  const favorites = await fetchFavorites();
+
+  if (favorites.length === 0) {
+    return <EmptyList />;
+  }
+
+  return <PropertiesList properties={favorites} />;
 }
-export default FavoritePage;
+export default FavoritesPage;
