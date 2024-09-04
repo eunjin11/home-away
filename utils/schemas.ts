@@ -1,6 +1,12 @@
 import * as z from "zod";
 import { ZodSchema } from "zod";
 
+export const createReviewSchema = z.object({
+  propertyId: z.string(),
+  rating: z.coerce.number().int().min(1).max(5),
+  comment: z.string().min(10).max(1000),
+});
+
 export const profileSchema = z.object({
   firstName: z.string().min(2, {
     message: "first name must be at least 2 characters",
