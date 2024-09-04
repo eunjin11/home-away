@@ -1,3 +1,14 @@
+export type DateRangeSelect = {
+  startDate: Date;
+  endDate: Date;
+  key: string;
+};
+
+export type Booking = {
+  checkIn: Date;
+  checkOut: Date;
+};
+
 export type actionFunction = (
   prevState: any,
   formData: FormData
